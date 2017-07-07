@@ -8,7 +8,7 @@ yellow =  (0,255,255)
 
 
 # Import image.
-my_image = Image.open("uncolored.jpg") #change IMAGENAME to the path on your computer to the image you're using
+my_image = Image.open("IMG_0538.jpg") #change IMAGENAME to the path on your computer to the image you're using
 image_list = my_image.getdata() #each pixel is represented in the form (red value, green value, blue value, transparency). You don't need the fourth value.
 image_list = list(image_list) #Turns the sequence above into a list. The list can be iterated through in a loop.
 
