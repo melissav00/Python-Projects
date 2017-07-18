@@ -16,14 +16,19 @@ first = 0
 last = len(countries)
 middle = int((first + last)/2)
 
-
 answer = input("What country would you like?")
-while first < last:
+
+notFound= True
+
+while first < last and notFound:
     if  answer == countries[middle]:
-        print("This is the middle of the list.")
+        notFound = False
     elif answer > countries[middle]:
-        print("This is in the first section of the list.")
+        last= last-1
     elif answer < countries[middle]:
-        print("This is in the last section of the list.")
-    else:
-        print("This is not on the list.")
+        first = first + 1
+
+if notFound:
+    print("Hello.")
+else:
+    print("This is on the list.")
